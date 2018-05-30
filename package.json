@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prerelease": "rm -rf dist",
-    "release": "mkdir dist && cp index.js dist/index.js"
+    "prerelease": "rm -rf dist && mkdir dist && cp index.js dist/index.js",
+    "release": "npm publish"
   },
   "files": [
     "dist"
