@@ -2,8 +2,8 @@
 language: node_js
 node_js:
   - "node"
-scripts
-  - npm publish
+script:
+- npm run release
 deploy:
   provider: npm
   email: supermanchc@gmail.com
