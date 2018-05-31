@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pages": "rm -rf dist && mkdir dist && cp index.html dist/index.html",
     "build": "rm -rf dist && mkdir dist && cp index.js dist/index.js && cp index.html dist/index.html",
     "release": "npm publish"
   },
