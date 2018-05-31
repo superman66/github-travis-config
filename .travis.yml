@@ -2,11 +2,12 @@
 language: node_js
 node_js:
   - "node"
-    
+
+script:
+  - npm run pages
 job:
   include:
     - stage: ghpages
-      script: npm run page
       deploy:
         provider: pages
         skip-cleanup: true
