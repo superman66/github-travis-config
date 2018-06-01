@@ -5,6 +5,7 @@ node_js:
 
 script:
   - npm run pages
+
 jobs:
   include:
     - stage: ghpages
@@ -24,10 +25,9 @@ jobs:
         api_key: $NPM_KEY
         skip-cleanup: true
         on:
-          branch: master
+          tag: true
 
 # You can specify the order for stages
 stages:
   - ghpages
-  - name: deploy
-    if: tag IS present # conditional build, only deploy when tag is present
+  - deploy
