@@ -28,5 +28,6 @@ jobs:
 
 # You can specify the order for stages
 stages:
+  - name: ghpages
   - name: deploy
     if: tag IS present # conditional build, only deploy when tag is present
