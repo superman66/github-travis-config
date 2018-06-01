@@ -14,6 +14,8 @@ jobs:
       email: supermanchc@gmail.com
       api_key: $NPM_KEY
       skip-cleanup: true
+      on:
+        tags: true
 
 # You can specify the order for stages
 stages:
