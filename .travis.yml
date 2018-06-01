@@ -7,15 +7,22 @@ script:
   - npm run pages
 jobs:
   include:
-    stage: deploy
-    script: npm run build
-    deploy:
-      provider: npm
-      email: supermanchc@gmail.com
-      api_key: $NPM_KEY
-      skip-cleanup: true
-      on:
-        tags: true
+    - stage: ghpages
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        local-dir: dist
+    - stage: deploy
+      script: npm run build
+      deploy:
+        provider: npm
+        email: supermanchc@gmail.com
+        api_key: $NPM_KEY
+        skip-cleanup: true
+        on:
+          tags: true
 
 # You can specify the order for stages
 stages:
